@@ -21,9 +21,9 @@ public class Arrays {
 		students[4] = "Jane Smith";
 		students[5] = "So-and-so";
 		
-//		System.out.println(students[0]);
-//		System.out.println(students[1]);
-//		System.out.println(students[2]);
+		System.out.println(students[0]);
+		System.out.println(students[1]);
+		System.out.println(students[2]);
 		
 		for (int i = 0; i < students.length; i++) {
 			System.out.println(students[i]);
