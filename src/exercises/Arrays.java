@@ -6,14 +6,16 @@ public class Arrays {
 		// Arrays
 //		Example 1:
 		
-		String student1Name = "John Doe";
-		String student2Name	= "Joe Schmoe";
-		String student3Name = "Joe Bloggs";
-		String student4Name = "Jane Doe";
-		String student5Name = "Jane Smith";
-		String student6Name = "So-and-so";
+//		String student1Name = "John Doe";
+//		String student2Name	= "Joe Schmoe";
+//		String student3Name = "Joe Bloggs";
+//		String student4Name = "Jane Doe";
+//		String student5Name = "Jane Smith";
+//		String student6Name = "So-and-so";
+//		String student7Name = "Fred Bloggs";
+//		String student8Name = "Joe Anybody";
 
-		String[] students = new String[6];
+		String[] students = new String[8];
 		
 		students[0] = "John Doe";
 		students[1] = "Joe Schmoe";
@@ -21,6 +23,8 @@ public class Arrays {
 		students[3] = "Jane Doe";
 		students[4] = "Jane Smith";
 		students[5] = "So-and-so";
+		students[6] = "Fred Bloggs";
+		students[7] = "Joe Anybody";
 		
 		System.out.println(students[0]);
 		System.out.println(students[1]);
@@ -28,6 +32,8 @@ public class Arrays {
 		System.out.println(students[3]);
 		System.out.println(students[4]);
 		System.out.println(students[5]);
+		System.out.println(students[6]);
+		System.out.println(students[7]);
 		
 		System.out.println();
 		
@@ -37,7 +43,9 @@ public class Arrays {
 			System.out.println(students[i]);
 		}
 		
+//		Enhanced for loops or for-each loops:
 		System.out.println();
+		System.out.println("Enhanced for loops or for-each loops:");
 		
 		for (String student : students) {
 			System.out.println(student);
@@ -81,7 +89,7 @@ public class Arrays {
 		}
 		System.out.println();
 		
-//		Or you can do:
+//		Or you can do a for loop:
 		
 		for (int i = 1; i <= multiplesOf3.length; i++) {
 			multiplesOf3[i - 1] = i * 3;
