@@ -12,11 +12,11 @@ public class Methods {
 		
 		System.out.println(fullName);
 		System.out.println(fullName2);
-
+		
 	}
 
-	public static String createFullName(String x, String z) {
-		return x + " " + z;
+	public static String createFullName(String x, String y) {
+		return x + " " + y;
 	}
 	
 }
