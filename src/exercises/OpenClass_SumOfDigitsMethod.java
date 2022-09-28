@@ -6,17 +6,13 @@ public class OpenClass_SumOfDigitsMethod {
 
 	static int sumOfDigits(int digits) {
 		// Write your code below 
-        int result = digits;
         int sum = 0;
-        while (result > 0) {
-            sum = sum + result % 10;
-            result = result / 10;
+        while (digits > 0) {
+            sum += digits % 10;
+            digits = digits / 10;
         }
   		return sum; 
-}
-			
-		
-		
+	}		
 	
 
     // Do not change the code below this line 
