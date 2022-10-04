@@ -163,20 +163,20 @@ public class Labs_ArraysAndMethods {
 		return evensSum > oddsSum;
 	}
 	
-	/*The method below is a simpler version of the method above. It uses an enhanced for loop instead of a for loop. That's the one showed in the video
-	
-	public static boolean hasMoreEvenWordCharacters(String[] arr) {
-		int evensSum = 0;
-		int oddsSum = 0;
-		for (String name : arr) {
-			if (name.length() % 2 == 0) {
-				evensSum += name.length();
-			} else {
-				oddsSum += name.length();
-			}
-		}
-		return evensSum > oddsSum;
-	}*/
+//	The method below is a simpler version of the method above. It uses an enhanced for loop instead of a for loop. That's the one showed in the video
+//	
+//	public static boolean hasMoreEvenWordCharacters(String[] arr) {
+//		int evensSum = 0;
+//		int oddsSum = 0;
+//		for (String name : arr) {
+//			if (name.length() % 2 == 0) {
+//				evensSum += name.length();
+//			} else {
+//				oddsSum += name.length();
+//			}
+//		}
+//		return evensSum > oddsSum;
+//	}
 	
 	public static boolean isPalindrome(String string) {
 		for (int i = 0; i < string.length() / 2; i++) {
