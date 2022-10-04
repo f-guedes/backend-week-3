@@ -55,7 +55,7 @@ public class Labs_ArraysAndMethods {
   		 }
 		
 		//create an array that contains the values "Sam", "Sally", "Thomas", and "Robert"
-		String[] names = {"Sam", " Sally", "Thomas", "Robert"};
+		String[] names = {"Sam", "Sally", "Thomas", "Robert"};
 				
 		//calculate the sum of all the letters in the new array
 		int sumOfLetters = 0;
@@ -77,24 +77,29 @@ public class Labs_ArraysAndMethods {
 		//write and test a method that takes a String and an int and returns true if the number of letters in the string is greater than the int
 		System.out.println(isStringGreater ("Inexplicably", 11));
 		
-		//write and test a method that takes an array of string and a string and returns true if the string passed in exists in the array
-		
+		//write and test a method that takes an array of string and a string and returns true if the string passed in exists in the array		
 		System.out.println(stringExists(names, "Sam"));
 		
 		//write and test a method that takes an array of int and returns the smallest number in the array
+		System.out.println(getSmallestNumber (arr));
 
 		//write and test a method that takes an array of double and returns the average
-
+		double[] arrayOfDoubles = {17, 27.19, 38.5, 48.45, 93, 101.01};		
+		System.out.printf("%.2f%n", getAverage(arrayOfDoubles));
+		
 		//write and test a method that takes an array of Strings and returns an array of int where each element
 		//matches the length of the string at that position
-
+		int[] nameLengths = extractStringLengths(names);
+		for (int number : nameLengths) {
+			System.out.println(number);
+		}
 		
 		//write and test a method that takes an array of strings and returns true if the sum of letters for all strings with an 
 		//even amount of letters is greater than the sum of those with an odd amount of letters.
-
+		System.out.println(hasMoreEvenWordCharacters(names));
 		
 		//write and test a method that takes a string and returns true if the string is a palindrome
-
+		System.out.println(isPalindrome("level"));
 		
 	}
 	
@@ -118,7 +123,69 @@ public class Labs_ArraysAndMethods {
 		}	return false;
 	} 
 	
+	public static int getSmallestNumber (int[] arr) {
+		int smallest = arr[0];
+		for (int number : arr) {
+			if (number < smallest) {
+				smallest = number;
+			}
+		} return smallest;
+	}
+	
+	public static double getAverage (double[] arr) {
+		double sum = 0;
+		for (double number : arr) {
+			sum += number;					
+		}return sum / arr.length;
+	}
+	
+	public static int[] extractStringLengths (String[] arr) {
+		int[] results = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			results[i] = arr[i].length();
+		}
+		return results;
+	}
 	
 	
+	public static boolean hasMoreEvenWordCharacters (String[] arr) {
+		int evensSum = 0;
+		int oddsSum = 0;
+		int [] stringLength = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			stringLength[i] = arr[i].length();
+			if (stringLength[i] % 2 == 0) {
+				evensSum += arr[i].length();
+			} else {
+				oddsSum += arr[i].length();
+			}
+		}		
+		return evensSum > oddsSum;
+	}
+	
+	/*The method below is a simpler version of the method above. It uses an enhanced for loop instead of a for loop. That's the one showed in the video
+	
+	public static boolean hasMoreEvenWordCharacters(String[] arr) {
+		int evensSum = 0;
+		int oddsSum = 0;
+		for (String name : arr) {
+			if (name.length() % 2 == 0) {
+				evensSum += name.length();
+			} else {
+				oddsSum += name.length();
+			}
+		}
+		return evensSum > oddsSum;
+	}*/
+	
+	public static boolean isPalindrome(String string) {
+		for (int i = 0; i < string.length() / 2; i++) {
+			if (string.charAt(i) != string.charAt(string.length() - i -1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+		
 }	
 	
