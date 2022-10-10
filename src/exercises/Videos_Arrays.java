@@ -1,6 +1,6 @@
 package exercises;
 
-public class Arrays {
+public class Videos_Arrays {
 
 	public static void main(String[] args) {
 		// Arrays
